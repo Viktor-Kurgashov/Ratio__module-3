@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+p, ul, body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button {
+  font: inherit;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  padding: 0;
+}
+
+
+
+body {
+  text-align: center;
+  font-size: min(8vw, 40px);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: min(125px, 22.5vw) 5%;
+}
+
+#container {
+  width: 90vw;
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template:
+    "score restart" 1.7em
+    "list list" auto
+    "records records" auto
+    / 56% 40%;
+  gap: 1em 4%;
+}
+
+
+
+#score, #restart {
+  background: whitesmoke;
+  font-weight: bold;
+}
+
+#score {
+  line-height: 1.8em;
+  border-radius: 0.1em;
+  grid-area: score;
+}
+
+#restart {
+  font-size: 0.5em;
+  line-height: 3.6em;
+  border-radius: 0.2em;
+  grid-area: restart;
+}
+
+
+
+#field {
+  background: whitesmoke;
+  border-radius: 0.1em;
+  position: relative;
+  height: 90vw;
+  max-height: 500px;
+  grid-area: list;
+}
+
+.item {
+  color: white;
+  line-height: 1.8em;
+  border-radius: inherit;
+  transition: 0.25s linear;
+  position: absolute;
+  width: 15.2%;
+  height: 15.2%;
+}
+
+
+
+.n2 { background: sandybrown; }
+.n4 { background: darkcyan; }
+.n8 { background: deeppink; }
+.n16 { background: forestgreen; }
+.n32 { background: gold; }
+.n64 { background: dodgerblue; }
+.n128 { background: orangered; }
+.n256 { background: indigo; }
+.n512 { background: brown; }
+
+.n16, .n32, .n64 {
+  font-size: 0.9em;
+  line-height: 2em;
+}
+
+.n128, .n256, .n512 {
+  font-size: 0.8em;
+  line-height: 2.25em;
+}
+
+.n1024, .n2048 {
+  font-size: 0.66em;
+  line-height: 2.7em;
+  background: dimgrey;
+}
+
+
+
+@media screen and (min-width: 525px) {
+  .item { line-height: 1.95em; }
+
+  .n16, .n32, .n64 { line-height: 2.2em; }
+
+  .n128, .n256, .n512 { line-height: 2.45em; }
+
+  .n1024, .n2048 { line-height: 3em; }
+}
+
+
+
+#form {
+  background: rgba(34, 139, 34, 0.8);
+  border-radius: inherit;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5em;
+}
+
+#form__field,
+#form__submit {
+  width: 80%;
+  font-size: 0.5em;
+  border-radius: 0.2em;
+  padding: 1.1em 1.1em 0.9em; 
+}
+
+#form__submit {
+  font-weight: bold;
+  padding: 1.05em 0 0.8em;
+}
+
+#form__submit:active {
+  opacity: 0.8;
+}
+
+
+
+
+#records {
+  grid-area: records;
+  font-size: 0.5em;
+  line-height: 2.5em;
+  text-align: left;
+}
+
+#records > caption {
+  font-weight: bold;
+}
+
+#records td:first-child {
+  text-align: right;
+  padding-right: 8%;
+  width: 54%;
+}
