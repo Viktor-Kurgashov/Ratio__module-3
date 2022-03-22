@@ -1,0 +1,25 @@
+{
+  "name": "module3",
+  "version": "1.0.0",
+  "description": "lorem ipsum",
+  "main": "server.js",
+  "dependencies": {
+    "mongo": "^0.1.0",
+    "mongodb": "^4.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viktor-Kurgashov/Ratio__module-3.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Viktor-Kurgashov/Ratio__module-3/issues"
+  },
+  "homepage": "https://github.com/Viktor-Kurgashov/Ratio__module-3#readme"
+}
